@@ -21,6 +21,14 @@ export class MeuComponente {
 ```
 - Aqui, o Angular só atualiza a UI se o @Input dados receber uma nova referência ou se o componente disparar um evento interno.
 
-### Como você organizaria os estilos SCSS da aplicação?
+### Como você organizaria os estilos SCSS/estilos da aplicação?
 
-- 
+- Organizo os estilos SCSS em uma estrutura modular com pastas como ```base``` (para resets), ```components``` (para estilos de botões, cards), e ```utils``` (para variáveis e mixins). Uso um arquivo ```main.scss``` com ```@use``` para importar tudo. Apesar de o Angular encapsular bem CSS é interessante ter essa arquitetura dos estilos, para a manutenibilidade a medida que o projeto crescer.
+
+``` bash
+styles/
+├── base/_reset.scss
+├── components/_button.scss
+├── utils/_variables.scss
+├── main.scss
+```
