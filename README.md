@@ -85,6 +85,12 @@ styles/
 - Observable é muito usado no Angular, usado para coisas complexas, como vários resultados, um fluxo contínuo. Exemplo: "Quero a lista de tarefas sempre que ela mudar." O Observable continua enviando as novas listas.
 - Signals é novo no Angular, para mudanças simples, mais fácil de usar, usado para gerenciar o estado da interface. Exemplo: atualizar a tela quando uma tarefa é marcada como concluída, se a tarefa mudar de 'pendente' para 'concluída', a tela atualiza sozinha.
 
+### Qual a diferença de swicthMap e mergeMap?
+
+- SwitchMap cancela a operação anterior e usa apenas a mais recente quando um novo valor chega, mergeMap
+executa todas as operações ao mesmo tempo, combinando os resultados, sem cancelar as anteriores.
+  - Exemplo: Se o usuário digita "tarefa1", "tarefa2", "tarefa3" rápido, switchMap busca apenas "tarefa3" na API, cancelando as anteriores. mergeMap busca todas, retornando resultados para "tarefa1", "tarefa2" e "tarefa3".
+
 ### Como você faria gerenciamento de estado?
 
 - Uso um service com Observables, ou service com Signals. O service guarda uma tarefa e uso Observables ou Signals para avisar a tela quando algo muda.
