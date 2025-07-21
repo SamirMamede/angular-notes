@@ -79,6 +79,14 @@ styles/
 
 - Usaria lazy loading, changeDetection OnPush, trabalhar mais com imutabilidade para evitar Change Detection.
 
+### Como funciona o ciclo de vida de um componente no Angular?
+
+- O ciclo de vida de um componente são etapas (ngOnInit, ngOnChanges, ngAfterViewInit, ngOnDestroy) que permitem executar ações desde a criação até a destruição.
+    - Em ngOnInit, busco a lista de tarefas do TaskService (ex.: via tasks$).
+    - Em ngOnChanges, atualizo a lista se uma entrada mudar.
+    - Em ngAfterViewInit, configuro animações na lista.
+    - Em ngOnDestroy, cancelo a inscrição do Observable para evitar vazamentos de memória.
+
 ### O que é Change Detection?
 
 - É o mecanismo que verifica se os dados da aplicação mudaram e atualiza a tela (interface) para refletir essas mudanças. É como um "observador" que checa se algo novo aconteceu e garante que o HTML mostre o estado atual.
