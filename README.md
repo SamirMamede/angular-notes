@@ -21,6 +21,20 @@ Anotações sobre desenvolvimento utilizando Angular.
    - Exemplo: ngClass muda a cor de uma tarefa se estiver concluída. ngModel sincroniza um formulário com os dados.
 - Componentes: São diretivas com um template (interface) e lógica própria, como um pedaço reutilizável da aplicação.
    - Exemplo: Um TaskListComponent exibe a lista de tarefas com sua própria lógica e visual.
+ 
+### O que são Pipes?
+
+- È uma funcionalidade esepcífica para transformação de dados, é uma má prática utilziar métodos no template, logo, o correto é você utilizar pipes.
+
+### O que são Pipes puros e Pipes impuros?
+
+- Pipes Puros:
+   - Só são executados quando os dados de entrada mudam (imutabilidade). Isso os torna mais rápidos, pois evitam cálculos desnecessários, melhorando a performance.
+      - Exemplo: O pipe date formata uma data (ex.: {{ task.date | date:'dd/MM/yyyy' }}). Só recalcula se a data mudar.
+    
+- Pipes Impuros:
+   - São executados toda vez que o Angular verifica mudanças, mesmo que os dados não mudem. São úteis para dados que mudam com frequência, mas podem ser mais lentos, impactando na performance.
+      - Exemplo: Um pipe personalizado que filtra tarefas em tempo real (ex.: {{ tasks | filter:'concluídas' }}) precisa ser impuro para atualizar a lista sempre que o filtro muda.
 
 ### Como você otimizaria o desempenho de um componente grande no Angular?
 
