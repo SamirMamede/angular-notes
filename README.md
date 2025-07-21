@@ -42,3 +42,9 @@ styles/
 - A promise tem um ciclo de vida, um resultado, acaba depois de entregar. Exemplo: "Quero os dados de um usuário." A Promise te entrega os dados e termina.
 - Observable é muito usado no Angular, usado para coisas complexas, como vários resultados, um fluxo contínuo. Exemplo: "Quero a lista de tarefas sempre que ela mudar." O Observable continua enviando as novas listas.
 - Signals é novo no Angular, para mudanças simples, mais fácil de usar, usado para gerenciar o estado da interface. Exemplo: atualizar a tela quando uma tarefa é marcada como concluída, se a tarefa mudar de 'pendente' para 'concluída', a tela atualiza sozinha.
+
+### Como você faria gerenciamento de estado?
+
+- Uso um service com Observables, ou service com Signals. O service guarda uma tarefa e uso Observables ou Signals para avisar a tela quando algo muda.
+   - Observables: (do RxJS) para avisar os componentes quando algo muda, como ao adicionar uma tarefa.
+   - Signals: para mudanças simples, como marcar uma tarefa como concluída, atualizando a tela automaticamente.
