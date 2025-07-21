@@ -60,4 +60,6 @@ styles/
 
 - Dividiria em workspaces, libs talvez, utilizaria Nx. Criaria módulos separados para cada grupo de funcionalidades. Usaria Nx para organizar os módulos, separar os componentes e os serviços.
 
-### Você saber o que é micro front-end? Os prós e os contras de se trabalhar com micro front-end?
+### Você saber o que é micro front-end? Quais cenários você utilizaria micro front-end?
+
+- Eles são bons no cenário que você tem uma aplicação web legada e quer construir uma nova, sem abrir mão da antiga.
