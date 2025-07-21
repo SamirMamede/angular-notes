@@ -2,6 +2,10 @@
 
 Anotações sobre desenvolvimento utilizando Angular.
 
+### Qual a diferença entre Angular e Angular Js?
+
+- AngularJS é a versão antiga, usa JavaScript e controladores. Angular é moderno, usa TypeScript, componentes e é mais rápido e organizado.
+
 ### Como você otimizaria o desempenho de um componente grande no Angular?
 
 - O Angular é focado em componentização, não deveria ter um componente muito grande, não é interessante criar um componente com muitas responsabilidades, mas existem algumas estratégias para aplicar como utilizar On push e não usar métodos no template, quando você invoca uma função no template, o Angular vai ficar rodando ela toda hora.
