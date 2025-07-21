@@ -48,3 +48,10 @@ styles/
 - Uso um service com Observables, ou service com Signals. O service guarda uma tarefa e uso Observables ou Signals para avisar a tela quando algo muda.
    - Observables: (do RxJS) para avisar os componentes quando algo muda, como ao adicionar uma tarefa.
    - Signals: para mudanças simples, como marcar uma tarefa como concluída, atualizando a tela automaticamente.
+ 
+### Como você lida com erros de maneira global?
+
+- Uso ErrorHandler para erros gerais, HttpInterceptor para erros de API, e try-catch para erros locais.
+  - ErrorHandler do Angular para capturar erros gerais da aplicação, como falhas inesperadas no código e mostro uma mensagem amigável ao usuário, como "Algo deu errado, tente novamente".
+  - Para erros em chamadas HTTP, uso um HttpInterceptor, permitindo tratar erros de forma centralizada, como exibir um alerta de "Servidor indisponível".
+  - Localmente em componentes ou serviços, trato erros específicos com blocos try-catch ou assinando erros de Observables, verifico se houve erro e mostro uma mensagem como "Nenhuma tarefa encontrada".
