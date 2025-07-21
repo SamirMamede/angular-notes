@@ -130,3 +130,10 @@ executa todas as operações ao mesmo tempo, combinando os resultados, sem cance
 ### Você saber o que é micro front-end? Quais cenários você utilizaria micro front-end?
 
 - Eles são bons no cenário que você tem uma aplicação web legada e quer construir uma nova, sem abrir mão da antiga.
+
+### Angular CLI
+
+- ```ng new``` cria projeto, ```ng generate``` faz componentes/serviços, ```ng serve``` roda, ```ng build``` compila, ```ng test``` testa, ```ng lint``` verifica.
+    - Exemplo: ```ng new task-app``` cria a aplicação para a lista de tarefas.
+    - Exemplo: ```ng g component task-list``` cria o ```TaskListComponent```. ```ng g service task``` cria o ```TaskService```.
+    - Exemplo: ```ng serve``` roda a lista de tarefas em ```http://localhost:4200```.
