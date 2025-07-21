@@ -32,3 +32,7 @@ styles/
 ├── utils/_variables.scss
 ├── main.scss
 ```
+
+### Como você faria para refatorar um componente que é grande, inchado sem necessidade, de 2 mil linhas por exemplo, cheio de regras de negócio, que está fazendo muitas coisas?
+
+- Para refatorar um componente de 2 mil linhas cheio de regras de negócio, eu começaria analisando o código e separando responsabilidades com comentários, identificaria que componentes filhos eu poderia criar, moveria partes de lógica para um service e escreveria testes unitários para garantir que nada quebrou, executando-os após cada mudança.
