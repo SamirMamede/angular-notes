@@ -6,6 +6,10 @@ Anotações sobre desenvolvimento utilizando Angular.
 
 - AngularJS é a versão antiga, usa JavaScript e controladores. Angular é moderno, usa TypeScript, componentes e é mais rápido e organizado.
 
+### O que são módulos e services?
+
+- Módulo é uma caixa que organiza componentes e serviços, define o que a aplicação precisa para uma funcionalidade específica, por exemplo um módulo para gerenciar tarefas. Service é um gerente que cuida de dados e lógica, compartilhando-os com os componentes, exemplo: O TaskService busca tarefas de uma API REST e as fornece aos componentes, garantindo que todos usem a mesma lista.
+  
 ### O que são diretivas?
 
 - Diretivas são instruções que adicionam comportamentos ou modificam o HTML para tornar a interface mais dinâmica. Elas controlam como os elementos aparecem ou funcionam na tela.
