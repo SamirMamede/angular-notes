@@ -6,6 +6,22 @@ Anotações sobre desenvolvimento utilizando Angular.
 
 - AngularJS é a versão antiga, usa JavaScript e controladores. Angular é moderno, usa TypeScript, componentes e é mais rápido e organizado.
 
+### O que são diretivas?
+
+- Diretivas são instruções que adicionam comportamentos ou modificam o HTML para tornar a interface mais dinâmica. Elas controlam como os elementos aparecem ou funcionam na tela.
+   - Permitem mostrar, esconder ou repetir elementos (ex.: mostrar uma lista de tarefas).
+   - Podem mudar a aparência de elementos (ex.: adicionar uma cor a uma tarefa).
+   - Permitem criar comportamentos personalizados (ex.: destacar uma tarefa ao clicar).
+
+### Quais são os tipos de diretiva no Angular?
+
+- Estruturais: Modificam a estrutura do HTML, adicionando ou removendo elementos.
+   - Exemplo: *ngFor repete elementos, como listar tarefas. *ngIf mostra ou esconde algo, como uma mensagem "Sem tarefas".
+- De Atributo: Alteram a aparência ou comportamento de um elemento existente.
+   - Exemplo: ngClass muda a cor de uma tarefa se estiver concluída. ngModel sincroniza um formulário com os dados.
+- Componentes: São diretivas com um template (interface) e lógica própria, como um pedaço reutilizável da aplicação.
+   - Exemplo: Um TaskListComponent exibe a lista de tarefas com sua própria lógica e visual.
+
 ### Como você otimizaria o desempenho de um componente grande no Angular?
 
 - O Angular é focado em componentização, não deveria ter um componente muito grande, não é interessante criar um componente com muitas responsabilidades, mas existem algumas estratégias para aplicar como utilizar On push e não usar métodos no template, quando você invoca uma função no template, o Angular vai ficar rodando ela toda hora.
