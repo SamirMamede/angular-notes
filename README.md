@@ -75,6 +75,17 @@ styles/
 ├── main.scss
 ```
 
+### Como você faria para melhorar a performance da aplicação Angular?
+
+- Usaria lazy loading, changeDetection OnPush, trabalhar mais com imutabilidade para evitar Change Detection.
+
+### O que é Change Detection?
+
+- É o mecanismo que verifica se os dados da aplicação mudaram e atualiza a tela (interface) para refletir essas mudanças. É como um "observador" que checa se algo novo aconteceu e garante que o HTML mostre o estado atual.
+    - Tipos:
+      - Default: Angular verifica tudo a cada evento (ex.: clique), o que é bom para a maioria dos casos.
+      - OnPush: Só verifica quando entradas do componente ou eventos específicos mudam, sendo mais rápido para aplicações grandes.
+
 ### Como você faria para refatorar um componente que é grande, inchado sem necessidade, de 2 mil linhas por exemplo, cheio de regras de negócio, que está fazendo muitas coisas?
 
 - Para refatorar um componente de 2 mil linhas cheio de regras de negócio, eu começaria analisando o código e separando responsabilidades com comentários, identificaria que componentes filhos eu poderia criar, moveria partes de lógica para um service e escreveria testes unitários para garantir que nada quebrou, executando-os após cada mudança.
