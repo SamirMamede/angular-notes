@@ -55,3 +55,9 @@ styles/
   - ErrorHandler do Angular para capturar erros gerais da aplicação, como falhas inesperadas no código e mostro uma mensagem amigável ao usuário, como "Algo deu errado, tente novamente".
   - Para erros em chamadas HTTP, uso um HttpInterceptor, permitindo tratar erros de forma centralizada, como exibir um alerta de "Servidor indisponível".
   - Localmente em componentes ou serviços, trato erros específicos com blocos try-catch ou assinando erros de Observables, verifico se houve erro e mostro uma mensagem como "Nenhuma tarefa encontrada".
+
+### Como você organizaria uma aplicação com vários módulos, várias funcionalidades? Como você organizaria essa arquitetura?
+
+- Dividiria em workspaces, libs talvez, utilizaria Nx. Criaria módulos separados para cada grupo de funcionalidades. Usaria Nx para organizar os módulos, separar os componentes e os serviços.
+
+### Você saber o que é micro front-end? Os prós e os contras de se trabalhar com micro front-end?
