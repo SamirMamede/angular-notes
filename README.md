@@ -35,6 +35,10 @@ Anotações sobre desenvolvimento utilizando Angular.
 - Pipes Impuros:
    - São executados toda vez que o Angular verifica mudanças, mesmo que os dados não mudem. São úteis para dados que mudam com frequência, mas podem ser mais lentos, impactando na performance.
       - Exemplo: Um pipe personalizado que filtra tarefas em tempo real (ex.: {{ tasks | filter:'concluídas' }}) precisa ser impuro para atualizar a lista sempre que o filtro muda.
+    
+### O que é Pipe async?
+
+- O pipe async mostra dados assíncronos (como Observables) no HTML e gerencia a inscrição automaticamente.
 
 ### Como você otimizaria o desempenho de um componente grande no Angular?
 
